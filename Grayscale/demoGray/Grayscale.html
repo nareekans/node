@@ -1,0 +1,57 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Grayscale',{
+        category: 'Microservice',
+        color: '#E9967A',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "loop.png",
+        label: function() {
+            return this.name||"Grayscale";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Grayscale">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-topic"><i class="icon-tag"></i> Topic</label>
+        <input type="text" id="node-input-topic" placeholder="Topic">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-method"><i class="fa fa-tasks"></i> <span data-i18n="node-red:httpin.label.method">Method</span></label>
+        <select type="text" id="node-input-method" style="width:70%;">
+        <option value="get">GET</option>
+        <option value="post">POST</option>
+        <option value="put">PUT</option>
+        <option value="delete">DELETE</option>
+        <option value="patch">PATCH</option>
+        </select>
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-url"><i class="fa fa-globe"></i>
+        <span data-i18n="node-red:httpin.label.url">URL</span></label>
+        <input id="node-input-url" type="text" placeholder="http://" dir="">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-output"><i class="fa fa-long-arrow-right"></i> <span data-i18n="node-red:template.label.output">Output as</span></label>
+        <select id="node-input-output" style="width:180px;">
+            <option value="str" data-i18n="node-red:template.label.plain">Plain text</option>
+            <option value="json" data-i18n="node-red:template.label.json">Parsed JSON</option>
+            <option value="yaml" data-i18n="node-red:template.label.yaml">Parsed YAML</option>
+        </select>
+    </div>
+</script>
+<script type="text/x-red" data-help-name="Grayscale">
+    <p>A node that increments every time a new message is received and sends Hello World in return.<br/>
+    </p>
+</script>
