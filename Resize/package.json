@@ -1,0 +1,14 @@
+{
+    "name": "Demoresize",
+    "version": "0.0.1",
+    "description": "A sample node for node-red",
+    "dependencies": {},
+    "keywords": [
+        "node-red-test"
+    ],
+    "node-red": {
+        "nodes": {
+            "sample": "Demoresize/Resize.js"
+        }
+    }
+}
